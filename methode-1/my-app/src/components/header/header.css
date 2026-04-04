@@ -1,0 +1,183 @@
+/* Container for the entire dashboard */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Tabs container */
+.tabs {
+    display: flex;
+    border-bottom: 2px solid #007bff;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: #e9ecef;
+    cursor: pointer;
+    font-size: 16px;
+    color: #495057;
+    text-align: center;
+}
+
+.tab-button.active {
+    background: #007bff;
+    color: #ffffff;
+}
+
+.tab-content {
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #dedede;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Form control styles */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+.btn-info {
+    background: #17a2b8;
+    border: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-info:hover {
+    background: #138496;
+}
+
+.btn-danger {
+    background: #dc3545;
+    border: none;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-danger:hover {
+    background: #c82333;
+}
+
+/* Alerts */
+.alert {
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.alert-info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+/* Table styles */
+.table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+}
+
+.table thead th {
+    background: #007bff;
+    color: #ffffff;
+    padding: 10px;
+    text-align: left;
+}
+
+.table tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.Counter {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.progress {
+    height: 25px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 10px;
+  }
+  
+  .progress-bar {
+    background-color: #4caf50;
+    height: 100%;
+    transition: width 0.4s ease;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+  }
+  .counterEmails,
+  .counterFailed,
+  .counterOpens{
+    border: 1px solid #18dd18;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    box-shadow: 0 0 2px;
+  }
+  .counterFailed{
+    border: 1px solid #dc3545;
+  }
+  .counterOpens{
+    border: 1px solid #0d6efd;
+  }
+  .numberEmailSent{
+    color:#18dd18 ;
+  }
+  .numberEmailFailed{
+    color:#dc3545 ;
+  }
+  .numberEmailOpens{
+    color:#0d6efd ;
+  }
+  .btnFailed{
+    position: relative;
+    float: right;
+    top: -7px;
+  }
+
+  ul{
+    list-style: none;
+  }
+  ul li{
+    list-style: none;
+    box-shadow: 0 0 2px ;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+    right: 30px;
+  }
