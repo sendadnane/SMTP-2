@@ -9,7 +9,7 @@ const port = 5000;
 
 // MongoDB setup
 
-mongoose.connect('mongodb+srv://shiraz03203129_db_user:hN6hGte8DGlhXVGF@sendingsmtp1.h060onv.mongodb.net/?appName=sendingSMTP1');
+mongoose.connect('mongodb+srv://sendadnane_db_user:ksmc9T8sNuCMPQ6R@smtp-2.h6jjp85.mongodb.net/?appName=SMTP-2');
 const db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'connection error:'));
