@@ -76,7 +76,7 @@ const Header = () => {
 
     const fetchEmailAccounts = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/email-accounts');
+            const response = await axios.get('https://smtp-2-hiez.onrender.com/email-accounts');
             setEmailAccounts(response.data);
         } catch (error) {
             console.error('Error fetching email accounts:', error);
@@ -85,7 +85,7 @@ const Header = () => {
 
     const handleDeleteEmailAccount = async (emailUser) => {
         try {
-            const response = await axios.delete('http://localhost:5000/delete-email-account', { data: { user: emailUser } });
+            const response = await axios.delete('https://smtp-2-hiez.onrender.com/delete-email-account', { data: { user: emailUser } });
 
             if (response.status === 200) {
                 setEmailAccounts(emailAccounts.filter(account => account.user !== emailUser));
@@ -155,7 +155,7 @@ const Header = () => {
             return;
         }
 
-        axios.post('http://localhost:5000/send-emails', { recipients: emails, subject: emailSubject, body: emailBody, batchSize: batchSize, fromEmail: fromEmail })
+        axios.post('https://smtp-2-hiez.onrender.com/send-emails', { recipients: emails, subject: emailSubject, body: emailBody, batchSize: batchSize, fromEmail: fromEmail })
             .then(response => {
                 console.log('Emails sent successfully:', response.data);
                 setCompleted(true);
@@ -169,7 +169,7 @@ const Header = () => {
                 setSending(false);
             });
 
-            const eventSource = new EventSource('http://localhost:5000/email-progress');
+            const eventSource = new EventSource('https://smtp-2-hiez.onrender.com/email-progress');
             eventSource.onmessage = (event) => {
               const data = JSON.parse(event.data);
 
@@ -217,7 +217,7 @@ const Header = () => {
         }
     
         try {
-            const response = await axios.post('http://localhost:5000/add-email-account', accountsToAdd);
+            const response = await axios.post('https://smtp-2-hiez.onrender.com/add-email-account', accountsToAdd);
             if (response.status === 201) {
                 Swal.fire('Success', 'Email accounts added successfully', 'success');
                 setEmailAccounts([...emailAccounts, ...accountsToAdd]);
@@ -243,7 +243,7 @@ const Header = () => {
         }
     
         try {
-            const response = await axios.post('http://localhost:5000/test-smtp', {
+            const response = await axios.post('https://smtp-2-hiez.onrender.com/test-smtp', {
                 user: account.user,
                 pass: account.pass,
                 host: account.host,
